@@ -10,3 +10,24 @@ describe("Command class", function() {
   });
 
 });
+
+//test 2
+describe("command" ,() => {
+  it("constructor sets command type", () => {
+    let commandType = 'MOVE';
+    let command = new Command(commandType);
+
+    expect(command.commandType).toBe(commandType);
+  });
+});
+
+//test 3
+
+describe('Command', () => {
+  it('constructor sets a value passed in as the 2nd argument', () => {
+    let commandType = 'MOVE';
+    let value = 100;
+    let command = new Command(commandType, value);
+    expect(command.value).toBe(value);
+  });
+});
